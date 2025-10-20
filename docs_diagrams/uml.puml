@@ -1,13 +1,36 @@
 @startuml
 left to right direction
 skinparam packageStyle rectangle
-actor "Пользователь" as User
-package "Система" {
-    usecase "Вход в систему" as UC_Login
-    usecase "Регистрация" as UC_Register
-    usecase "Сброс пароля" as UC_Reset
+
+actor Покупатель
+actor Администратор
+
+package "Учёт заказов в интернет-магазине" {
+  usecase "Просмотр каталога товаров" as U1
+  usecase "Выбор товара" as U2
+  usecase "Создание заказа" as U3
+  usecase "Подтверждение заказа" as U4
+  usecase "Отмена заказа" as U5
+  usecase "Получение заказа" as U6
+
+  usecase "Добавление товаров в каталог" as U7
+  usecase "Обработка заказа клиента" as U8
+  usecase "Обновление статуса заказа" as U9
+  usecase "Возврат денег за потерянный заказ" as U10
 }
-User --> UC_Login
-User --> UC_Register
-User --> UC_Reset
+
+Покупатель --> U1
+Покупатель --> U6
+
+
+Администратор --> U7
+Администратор --> U8
+Администратор --> U9
+Администратор --> U10
+
+U1 --> U2
+U2 --> U3
+U3 --> U4
+U3 --> U5
+
 @enduml
