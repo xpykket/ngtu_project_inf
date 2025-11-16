@@ -39,9 +39,9 @@
 
 
 ## Диаграмма Use Case
-![img_1.png](img_1.png)
+![img_1.png](docs_diagrams/fokti dlya readme/img_1.png)
 
 ## Блок-схема
-![img_2.png](img_2.png)
+![img_2.png](docs_diagrams/fokti dlya readme/img_2.png)
 ## ER диаграмма
-![img.png](img.png)
+![img.png](docs_diagrams/fokti dlya readme/img.png)

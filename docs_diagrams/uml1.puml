@@ -1,0 +1,78 @@
+@startuml
+
+!theme plain
+hide circle
+skinparam linetype ortho
+skinparam entity {
+  BackgroundColor White
+  BorderColor Black
+  FontName "Consolas"
+}
+
+entity "Category" as Category {
+  *category_id : INTEGER <<PK>>
+  --
+  name : TEXT
+}
+
+entity "Product" as Product {
+  *product_id : INTEGER <<PK>>
+  --
+  category_id : INTEGER <<FK>>
+  name : TEXT
+  price : REAL
+  availability : REAL
+}
+
+entity "Customer" as Customer {
+  *customer_id : INTEGER <<PK>>
+  --
+  name : TEXT
+  password : TEXT
+  phone : TEXT
+}
+
+entity "Order" as Order {
+  *order_id : INTEGER <<PK>>
+  --
+  customer_id : INTEGER <<FK>>
+  order_date : TEXT
+  order_cost : REAL
+  status : TEXT
+}
+
+entity "Order_filling" as Order_filling {
+  *Order_filling_id : INTEGER <<PK>>
+  --
+  order_id : INTEGER <<FK>>
+  product_id : INTEGER <<FK>>
+  price : REAL
+}
+
+entity "Payment" as Payment {
+  *payment_id : INTEGER <<PK>>
+  --
+  order_id : INTEGER <<FK>>
+  order_cost : REAL
+  payment_date : TEXT
+  p_status : TEXT
+}
+
+' СВЯЗИ
+
+' 1:N — Одна категория может содержать несколько товаров
+Category ||--o{ Product
+
+' 1:N — Один клиент может сделать несколько заказов
+Customer ||--o{ Order
+
+' 1:N — Один заказ может содержать несколько позиций в Order_filling
+Order ||--o{ Order_filling
+
+' 1:N — Один товар может быть в нескольких позициях заказов
+Product ||--o{ Order_filling
+
+' 1:1 — Каждый заказ имеет один платеж
+Order ||--|| Payment
+
+@enduml

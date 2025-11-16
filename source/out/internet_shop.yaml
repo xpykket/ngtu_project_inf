@@ -1,0 +1,40 @@
+- order_id: 1
+  Customer:
+    name: Илья
+    phone: '79999280780'
+  order_cost: 999.0
+  order_date: 13.11.2025
+  status: Оформлен
+  payment:
+    p_status: Оплата прошла успешно
+    payment_date: 13.11.2025 15:22
+- order_id: 2
+  Customer:
+    name: Дмитрий
+    phone: '79993350305'
+  order_cost: 7490.0
+  order_date: 14.11.2025
+  status: Ошибка оплаты
+  payment:
+    p_status: Ошибка оплаты
+    payment_date: 14.11.2025 13:43
+- order_id: 3
+  Customer:
+    name: Мария
+    phone: '79997031194'
+  order_cost: 109390.0
+  order_date: 10.10.2025
+  status: Оформлен
+  payment:
+    p_status: Оплата прошла успешно
+    payment_date: 10.10.2025 20:12
+- order_id: 4
+  Customer:
+    name: Глеб
+    phone: '79991360922'
+  order_cost: 1500.0
+  order_date: 11.11.2025
+  status: Оформлен
+  payment:
+    p_status: Оплата прошла успешно
+    payment_date: 11.11.2025 0:43
