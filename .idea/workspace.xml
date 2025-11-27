@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32ec0ffc-6dff-4252-8ed0-303441682836" name="Changes" comment="global update" />
+    <list default="true" id="32ec0ffc-6dff-4252-8ed0-303441682836" name="Changes" comment="fotki2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +56,11 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Xpykk\PycharmProjects\PythonProject4\docs_diagrams\fokti dlya readme" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.main (1)">
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject4" />
@@ -225,8 +233,27 @@
       <option name="project" value="LOCAL" />
       <updated>1763301021362</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fotki2">
+      <option name="closed" value="true" />
+      <created>1763301121255</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1763301121255</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="перевод" />
@@ -237,6 +264,7 @@
     <MESSAGE value="readme update" />
     <MESSAGE value="fotki" />
     <MESSAGE value="global update" />
-    <option name="LAST_COMMIT_MESSAGE" value="global update" />
+    <MESSAGE value="fotki2" />
+    <option name="LAST_COMMIT_MESSAGE" value="fotki2" />
   </component>
 </project>

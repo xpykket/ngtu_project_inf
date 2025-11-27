@@ -12,19 +12,12 @@ def main():
     cursor = conn.cursor()
 
     cursor.executescript("""
-    DROP TABLE IF EXISTS Category;
-    DROP TABLE IF EXISTS Product;
-    DROP TABLE IF EXISTS Customer;
-    DROP TABLE IF EXISTS "Order";
-    DROP TABLE IF EXISTS Order_filling;
-    DROP TABLE IF EXISTS Payment;
-
-    CREATE TABLE Category (
+    CREATE TABLE IF NOT EXISTS Category (
         category_id INTEGER PRIMARY KEY,
         name TEXT
     );
 
-    CREATE TABLE Product (
+    CREATE TABLE IF NOT EXISTS Product (
         product_id INTEGER PRIMARY KEY,
         category_id INTEGER,
         name TEXT,
@@ -33,14 +26,14 @@ def main():
         FOREIGN KEY(category_id) REFERENCES Category(category_id)
     );
 
-    CREATE TABLE Customer (
+    CREATE TABLE IF NOT EXISTS Customer (
         customer_id INTEGER PRIMARY KEY,
         name TEXT,
         password TEXT,
         phone TEXT
     );
 
-    CREATE TABLE "Order" (
+    CREATE TABLE IF NOT EXISTS "Order" (
         order_id INTEGER PRIMARY KEY,
         customer_id INTEGER,
         order_date TEXT,
@@ -49,7 +42,7 @@ def main():
         FOREIGN KEY(customer_id) REFERENCES Customer(customer_id)
     );
 
-    CREATE TABLE Order_filling (
+    CREATE TABLE IF NOT EXISTS Order_filling (
         Order_filling_id INTEGER PRIMARY KEY,
         order_id INTEGER,
         product_id INTEGER,
@@ -58,7 +51,7 @@ def main():
         FOREIGN KEY(product_id) REFERENCES Product(product_id)
     );
 
-    CREATE TABLE Payment (
+    CREATE TABLE IF NOT EXISTS Payment (
         payment_id INTEGER PRIMARY KEY,
         order_id INTEGER,
         order_cost REAL,
